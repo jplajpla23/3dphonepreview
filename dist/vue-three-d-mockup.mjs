@@ -16761,23 +16761,23 @@ const d0 = (A, M) => {
       }), D.render(t, N);
     }
     function I() {
-      !this.props.allowMouse || e.length && e.forEach((u) => {
+      !A.linearFilter || e.length && e.forEach((u) => {
         u.animation = u.lookAtAnim, u.goingHome = !1, clearTimeout(u.homeTimeout);
       });
     }
     function j() {
-      !this.props.allowMouse || e.length && e.forEach((u) => {
+      !A.linearFilter || e.length && e.forEach((u) => {
         u.animation = u.homeAnim;
       });
     }
     function s(u) {
-      if (!this.props.allowMouse)
+      if (!A.linearFilter)
         return;
       const c = M.value.getBoundingClientRect();
       z = u.clientX - c.left - c.width / 2, i = -(u.clientY - c.top - c.height / 2);
     }
     function C(u) {
-      if (!this.props.allowMouse)
+      if (!A.linearFilter)
         return;
       u.preventDefault();
       const c = M.value.getBoundingClientRect();

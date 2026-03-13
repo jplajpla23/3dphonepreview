@@ -221,7 +221,7 @@ export default {
     }
 
     function handleMouseEnter() {
-      if(!this.props.allowMouse){return;}
+      if(!props.linearFilter){return;}
       if (phones.length) {
         phones.forEach((phone) => {
           phone.animation = phone.lookAtAnim;
@@ -233,7 +233,7 @@ export default {
 
     function handleMouseLeave() {
       
-      if(!this.props.allowMouse){return;}
+      if(!props.linearFilter){return;}
       if (phones.length) {
         phones.forEach((phone) => {
           phone.animation = phone.homeAnim;
@@ -243,7 +243,7 @@ export default {
 
     function handleMouseMove(event) {
       
-      if(!this.props.allowMouse){return;}
+      if(!props.linearFilter){return;}
       const rect = container.value.getBoundingClientRect();
       mouseX = event.clientX - rect.left - rect.width / 2;
       mouseY = -(event.clientY - rect.top - rect.height / 2);
@@ -251,7 +251,7 @@ export default {
 
     function handleTouchMove(event) {
       
-      if(!this.props.allowMouse){return;}
+      if(!props.linearFilter){return;}
       event.preventDefault();
       const rect = container.value.getBoundingClientRect();
       mouseX = event.touches[0].clientX - rect.left - rect.width / 2;
