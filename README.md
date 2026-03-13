@@ -50,6 +50,8 @@ export default {
 | `position` | Object \| Array            | `false`  | `{ x: 0, y: 0, z: 0 }`         | The position of the phone. Can also be an array if multiple screens specified.                                                                                                                                              |  |
 | `rotation` | Object \| Array            | `false`  | `{ x: -0.2, y: 0.3, z: 0.06 }` | The orientation of the phone described in rotation values arround the 3 axes. Can also be an array if multiple screens specified.                                                                                           |
 
+allowMouse -> boolean 
+
 ### Caveats:
 
 - The `screen` prop is unreactive, so when using it as a video
