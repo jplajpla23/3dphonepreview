@@ -45,6 +45,10 @@ export default {
     linearFilter: {
       type: Boolean,
     },
+    allowMouse:{
+      type:Boolean,
+       default: true,
+    }
   },
   setup(props) {
     const container = ref(null);
@@ -217,6 +221,7 @@ export default {
     }
 
     function handleMouseEnter() {
+      if(!this.props.allowMouse){return;}
       if (phones.length) {
         phones.forEach((phone) => {
           phone.animation = phone.lookAtAnim;
@@ -227,6 +232,8 @@ export default {
     }
 
     function handleMouseLeave() {
+      
+      if(!this.props.allowMouse){return;}
       if (phones.length) {
         phones.forEach((phone) => {
           phone.animation = phone.homeAnim;
@@ -235,12 +242,16 @@ export default {
     }
 
     function handleMouseMove(event) {
+      
+      if(!this.props.allowMouse){return;}
       const rect = container.value.getBoundingClientRect();
       mouseX = event.clientX - rect.left - rect.width / 2;
       mouseY = -(event.clientY - rect.top - rect.height / 2);
     }
 
     function handleTouchMove(event) {
+      
+      if(!this.props.allowMouse){return;}
       event.preventDefault();
       const rect = container.value.getBoundingClientRect();
       mouseX = event.touches[0].clientX - rect.left - rect.width / 2;

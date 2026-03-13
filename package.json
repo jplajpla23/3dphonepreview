@@ -13,7 +13,7 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anatolykopyl/vue-three-d-mockup.git"
+    "url": "https://git.captemp.com:3000/joao/3dphonemockup.git"
   },
   "browser": {
     "./sfc": "src/Mockup.vue"

@@ -1,6 +1,6 @@
 # vue-three-d-mockup
 
-Check out the [docs](https://anatolykopyl.github.io/vue-three-d-mockup/)
+Check out the [docs](https://git.captemp.com:3000/joao/3dphonemockup)
 
 ## Installation
 

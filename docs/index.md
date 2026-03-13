@@ -28,7 +28,7 @@ import screenImage from './assets/screen.png';
       Guide
     </a>
     <a 
-      href="https://github.com/anatolykopyl/vue-three-d-mockup" 
+      href="https://git.captemp.com:3000/joao/3dphonemockup" 
       class="buttons__button buttons__button--secondary"
     >
       Github

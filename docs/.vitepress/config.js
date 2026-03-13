@@ -29,7 +29,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/anatolykopyl/vue-three-d-mockup'
+        link: 'https://git.captemp.com:3000/joao/3dphonemockup'
       }
     ]
   }
