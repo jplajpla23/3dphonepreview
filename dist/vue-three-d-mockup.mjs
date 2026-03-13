@@ -16724,7 +16724,7 @@ const d0 = (A, M) => {
             const b = new Q(), W = h.geometry.attributes.position, TM = h.geometry.attributes.uv;
             for (let K = 0; K < W.count; K += 1)
               b.fromBufferAttribute(W, K), TM.setXY(K, (b.x - f.min.x) / U.x, (b.y - f.min.y) / U.y);
-          })(), h.translateZ(3.6), h.geometry.center(), E.add(h);
+          })(), h.translateZ(1.5), h.geometry.center(), E.add(h);
         }, x = () => {
           new O0().load(l0, (p) => {
             const H = new KM();
@@ -16761,23 +16761,23 @@ const d0 = (A, M) => {
       }), D.render(t, N);
     }
     function I() {
-      !A.linearFilter || e.length && e.forEach((u) => {
+      !A.allowMouse || e.length && e.forEach((u) => {
         u.animation = u.lookAtAnim, u.goingHome = !1, clearTimeout(u.homeTimeout);
       });
     }
     function j() {
-      !A.linearFilter || e.length && e.forEach((u) => {
+      !A.allowMouse || e.length && e.forEach((u) => {
         u.animation = u.homeAnim;
       });
     }
     function s(u) {
-      if (!A.linearFilter)
+      if (!A.allowMouse)
         return;
       const c = M.value.getBoundingClientRect();
       z = u.clientX - c.left - c.width / 2, i = -(u.clientY - c.top - c.height / 2);
     }
     function C(u) {
-      if (!A.linearFilter)
+      if (!A.allowMouse)
         return;
       u.preventDefault();
       const c = M.value.getBoundingClientRect();

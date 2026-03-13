@@ -134,7 +134,7 @@ export default {
 
           recomputeUVs();
 
-          screen.translateZ(3.6);
+          screen.translateZ(1.5);
           screen.geometry.center();
           phone.add(screen);
         };
@@ -221,7 +221,7 @@ export default {
     }
 
     function handleMouseEnter() {
-      if(!props.linearFilter){return;}
+      if(!props.allowMouse){return;}
       if (phones.length) {
         phones.forEach((phone) => {
           phone.animation = phone.lookAtAnim;
@@ -233,7 +233,7 @@ export default {
 
     function handleMouseLeave() {
       
-      if(!props.linearFilter){return;}
+      if(!props.allowMouse){return;}
       if (phones.length) {
         phones.forEach((phone) => {
           phone.animation = phone.homeAnim;
@@ -243,7 +243,7 @@ export default {
 
     function handleMouseMove(event) {
       
-      if(!props.linearFilter){return;}
+      if(!props.allowMouse){return;}
       const rect = container.value.getBoundingClientRect();
       mouseX = event.clientX - rect.left - rect.width / 2;
       mouseY = -(event.clientY - rect.top - rect.height / 2);
@@ -251,7 +251,7 @@ export default {
 
     function handleTouchMove(event) {
       
-      if(!props.linearFilter){return;}
+      if(!props.allowMouse){return;}
       event.preventDefault();
       const rect = container.value.getBoundingClientRect();
       mouseX = event.touches[0].clientX - rect.left - rect.width / 2;
